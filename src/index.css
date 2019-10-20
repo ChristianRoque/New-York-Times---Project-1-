@@ -441,6 +441,7 @@ button:focus {
 	z-index: 1000;
 	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
 	filter: grayscale(0%);
+	transform: scale(1.2);
 }
 
 .animation-down {
@@ -464,7 +465,16 @@ button:focus {
 .bar-pictures-container {
 	overflow: auto;
 	white-space: nowrap;
+	margin: 0 0 -16px 0;
+}
+.categories {
+	display: flex;
+	/* overflow: auto; */
+	white-space: nowrap;
 	margin: 0 0 0 0;
+	background: black;
+	color: white;
+	overflow-x: scroll;
 }
 
 .slide {
@@ -485,4 +495,24 @@ button:focus {
 	100% {
 		filter: brightness(100%);
 	}
+}
+
+.categories-p {
+	margin: 0 0 0 0;
+}
+
+.categories-link {
+	margin: 10px 25px 10px 50px;
+	text-decoration: none;
+	color: white;
+}
+
+.categories-link:hover {
+	text-decoration: none;
+	color: white;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	background: transparent; /* make scrollbar transparent */
 }

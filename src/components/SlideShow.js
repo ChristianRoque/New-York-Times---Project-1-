@@ -27,13 +27,30 @@ export default class SlideShow extends Component {
 		});
 	};
 
+	categoryBar = () => {
+		let categories =
+			'arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, national, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, tmagazine, travel, upshot, world';
+		return categories.split(', ').map((eachCategory, i) => {
+			return (
+				<a key={i} href="#" className="categories-link">
+					<p className="categories-p" onClick={this.props.change}>
+						{eachCategory}
+					</p>
+				</a>
+			);
+		});
+	};
+
 	changeDisplay = (e) => {
 		console.log(e.target.alt, 'works');
 
 		this.setState({
 			pictureURl: this.props.data[e.target.alt].multimedia[4].url,
 			articleURL: this.props.data[e.target.alt].url,
-			target: 'blank'
+			title: this.props.data[e.target.alt].title,
+			abstract: this.props.data[e.target.alt].abstract,
+			target: 'blank',
+			rendered: true
 		});
 	};
 
@@ -41,7 +58,9 @@ export default class SlideShow extends Component {
 		if (!this.state.rendered) {
 			this.props.function();
 			this.setState({
-				pictureURl: this.props.data[this.state.current].multimedia[4].url
+				pictureURl: this.props.data[this.state.current].multimedia[4].url,
+				title: this.props.data[this.state.current].title,
+				abstract: this.props.data[this.state.current].abstract
 			});
 		}
 	};
@@ -78,6 +97,10 @@ export default class SlideShow extends Component {
 						{this.picturesBar()}
 					</div>
 				</div>
+				<div className="categories" style={stylePic}>
+					{this.categoryBar()}
+				</div>
+				<div />
 
 				<div className="slider">
 					<div className="space" />
@@ -85,11 +108,8 @@ export default class SlideShow extends Component {
 						<div className="layer bottom">
 							<div className="content-wrap">
 								<div className="content-body">
-									<h1>Look Sharp</h1>
-									<p>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium facere
-										unde temporibus sequi aut quod excepturi, blanditiis reiciendis possimus.
-									</p>
+									<h1>{this.state.title}</h1>
+									<p>{this.state.abstract}</p>
 								</div>
 
 								<img src="" alt="" />

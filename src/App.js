@@ -8,12 +8,27 @@ import React, { Component } from 'react';
 
 export default class App extends Component {
 	state = {
-		display: 'none'
+		display: 'none',
+		category: 'science'
 	};
 	componentWillMount = () => {
 		axios
 			.get(
-				'https://api.nytimes.com/svc/topstories/v2/science.json?q=person&api-key=BvqS8W96aazmsaOtCxkvUOxEImk19Cla'
+				`https://api.nytimes.com/svc/topstories/v2/science.json?q=person&api-key=BvqS8W96aazmsaOtCxkvUOxEImk19Cla`
+			)
+			.then((data) => {
+				this.setState({
+					results: data.data.results
+				});
+			});
+	};
+
+	changeCategory = (e) => {
+		console.log(e.target);
+		let category = e.target.innerText;
+		axios
+			.get(
+				`https://api.nytimes.com/svc/topstories/v2/${category}.json?q=person&api-key=BvqS8W96aazmsaOtCxkvUOxEImk19Cla`
 			)
 			.then((data) => {
 				this.setState({
@@ -35,7 +50,12 @@ export default class App extends Component {
 		return (
 			<div className="App">
 				<Navbar display={this.state.display} />
-				<SlideShow data={this.state.results} display={this.state.display} function={this.changeDisplay} />
+				<SlideShow
+					data={this.state.results}
+					display={this.state.display}
+					function={this.changeDisplay}
+					change={this.changeCategory}
+				/>
 			</div>
 		);
 	}
