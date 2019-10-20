@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/New-York-API/static/css/main.7a4b4868.chunk.css",
+    "main.js": "/New-York-API/static/js/main.d7a25e02.chunk.js",
+    "main.js.map": "/New-York-API/static/js/main.d7a25e02.chunk.js.map",
+    "runtime-main.js": "/New-York-API/static/js/runtime-main.5552ea10.js",
+    "runtime-main.js.map": "/New-York-API/static/js/runtime-main.5552ea10.js.map",
+    "static/css/2.0624914a.chunk.css": "/New-York-API/static/css/2.0624914a.chunk.css",
+    "static/js/2.596b06c7.chunk.js": "/New-York-API/static/js/2.596b06c7.chunk.js",
+    "static/js/2.596b06c7.chunk.js.map": "/New-York-API/static/js/2.596b06c7.chunk.js.map",
+    "index.html": "/New-York-API/index.html",
+    "precache-manifest.b2a8f6481b029741bfd1b58564ac5276.js": "/New-York-API/precache-manifest.b2a8f6481b029741bfd1b58564ac5276.js",
+    "service-worker.js": "/New-York-API/service-worker.js",
+    "static/css/2.0624914a.chunk.css.map": "/New-York-API/static/css/2.0624914a.chunk.css.map",
+    "static/css/main.7a4b4868.chunk.css.map": "/New-York-API/static/css/main.7a4b4868.chunk.css.map",
+    "static/media/index.css": "/New-York-API/static/media/background.d29046db.jpg",
+    "static/media/logo.svg": "/New-York-API/static/media/logo.25bf045c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5552ea10.js",
+    "static/css/2.0624914a.chunk.css",
+    "static/js/2.596b06c7.chunk.js",
+    "static/css/main.7a4b4868.chunk.css",
+    "static/js/main.d7a25e02.chunk.js"
+  ]
+}
