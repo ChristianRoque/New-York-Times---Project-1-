@@ -2,7 +2,7 @@
 	"name": "new",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://christianroque.github.io/New-York-API/",
+	"homepage": "https://christianroque.github.io/New-York-Times---Project-1-/",
 	"dependencies": {
 		"axios": "^0.19.0",
 		"bootstrap": "^4.3.1",
@@ -26,15 +26,7 @@
 		"extends": "react-app"
 	},
 	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
+		"production": [ ">0.2%", "not dead", "not op_mini all" ],
+		"development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ]
 	}
 }
