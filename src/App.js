@@ -21,6 +21,13 @@ export default class App extends Component {
 				});
 			});
 	};
+
+	changeDisplay = () => {
+		this.setState({
+			display: ''
+		});
+	};
+
 	render() {
 		if (!this.state.results) {
 			return <div>Loading</div>;
@@ -28,7 +35,7 @@ export default class App extends Component {
 		return (
 			<div className="App">
 				<Navbar display={this.state.display} />
-				<SlideShow data={this.state.results} display={this.state.display} />
+				<SlideShow data={this.state.results} display={this.state.display} function={this.changeDisplay} />
 			</div>
 		);
 	}

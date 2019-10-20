@@ -23,23 +23,13 @@ export default class Navbarr extends Component {
 
 				<ul>
 					<li>
-						<a href="#" className="nav-link">
-							Home
+						<a href="https://developer.nytimes.com/" target="blank" className="nav-link">
+							New York API
 						</a>
 					</li>
 					<li>
-						<a href="#" className="nav-link">
-							MediumApi
-						</a>
-					</li>
-					<li>
-						<a href="#" className="nav-link">
-							Medium Website
-						</a>
-					</li>
-					<li>
-						<a href="#" className="nav-link">
-							Contact Me
+						<a href="https://github.com/ChristianRoque" target="blank" className="nav-link">
+							Github
 						</a>
 					</li>
 				</ul>

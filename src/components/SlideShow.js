@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 export default class SlideShow extends Component {
+	state = {
+		pictureURl: 'galaxy.gif',
+		current: 0,
+		articleURL: '#',
+		target: ''
+	};
+
 	picturesBar = () => {
 		return this.props.data.map((eachArticle, i) => {
 			if (eachArticle.multimedia.length == 0) {
@@ -9,12 +15,37 @@ export default class SlideShow extends Component {
 			} else {
 				return (
 					<a key={i} href="#" className="links">
-						<img className="bar-logo" src={eachArticle.multimedia[0].url} />
+						<img
+							alt={i}
+							onClick={this.changeDisplay}
+							className="bar-logo"
+							src={eachArticle.multimedia[0].url}
+						/>
 					</a>
 				);
 			}
 		});
 	};
+
+	changeDisplay = (e) => {
+		console.log(e.target.alt, 'works');
+
+		this.setState({
+			pictureURl: this.props.data[e.target.alt].multimedia[4].url,
+			articleURL: this.props.data[e.target.alt].url,
+			target: 'blank'
+		});
+	};
+
+	onclick = () => {
+		if (!this.state.rendered) {
+			this.props.function();
+			this.setState({
+				pictureURl: this.props.data[this.state.current].multimedia[4].url
+			});
+		}
+	};
+
 	componentDidMount = () => {
 		let wrapper = document.getElementById('wrapper');
 		let topLayer = wrapper.querySelector('.top');
@@ -36,7 +67,7 @@ export default class SlideShow extends Component {
 	};
 
 	render() {
-		console.log(this.props.display, 'these are the props');
+		console.log(this.props.data, 'these are the props');
 		let stylePic = {
 			display: `${this.props.display}`
 		};
@@ -68,21 +99,21 @@ export default class SlideShow extends Component {
 						<div className="layer top">
 							<div className="content-wrap">
 								<div className="content-body">
-									<a href="#">
+									<a href={this.state.articleURL} target={this.state.target}>
 										<img
 											id="fetch"
 											src="New-York-Times-logo-removebg-preview.png"
-											onClick={this.picturesBar}
+											onClick={this.onclick}
 										/>
 										<img
 											id="fetch-ghost"
 											src="New-York-Times-logo-removebg-preview.png"
-											onClick={this.picturesBar}
+											onClick={this.onclick}
 										/>
 									</a>
 								</div>
 
-								<img src="galaxy.gif" alt="" />
+								<img src={this.state.pictureURl} alt="" />
 							</div>
 						</div>
 

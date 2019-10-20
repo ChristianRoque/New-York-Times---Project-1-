@@ -152,14 +152,14 @@ ul {
 	animation: animate 10000s linear infinite;
 }
 
-@keyframes animate {
+/* @keyframes animate {
 	from {
 		background-position: 0 0;
 	}
 	to {
 		background-position: 50000% 50000%;
 	}
-}
+} */
 
 .carousel-img {
 	/* border-radius: 20px; */
@@ -464,7 +464,7 @@ button:focus {
 .bar-pictures-container {
 	overflow: auto;
 	white-space: nowrap;
-	margin: 0 0 67px 0;
+	margin: 0 0 0 0;
 }
 
 .slide {
