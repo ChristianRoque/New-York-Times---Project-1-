@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/New-York-Times---Project-1-/static/css/main.efe5e9ec.chunk.css",
-    "main.js": "/New-York-Times---Project-1-/static/js/main.86d56399.chunk.js",
-    "main.js.map": "/New-York-Times---Project-1-/static/js/main.86d56399.chunk.js.map",
+    "main.css": "/New-York-Times---Project-1-/static/css/main.28ef080f.chunk.css",
+    "main.js": "/New-York-Times---Project-1-/static/js/main.01a3e056.chunk.js",
+    "main.js.map": "/New-York-Times---Project-1-/static/js/main.01a3e056.chunk.js.map",
     "runtime-main.js": "/New-York-Times---Project-1-/static/js/runtime-main.1704763c.js",
     "runtime-main.js.map": "/New-York-Times---Project-1-/static/js/runtime-main.1704763c.js.map",
     "static/css/2.0624914a.chunk.css": "/New-York-Times---Project-1-/static/css/2.0624914a.chunk.css",
     "static/js/2.2025bf25.chunk.js": "/New-York-Times---Project-1-/static/js/2.2025bf25.chunk.js",
     "static/js/2.2025bf25.chunk.js.map": "/New-York-Times---Project-1-/static/js/2.2025bf25.chunk.js.map",
     "index.html": "/New-York-Times---Project-1-/index.html",
-    "precache-manifest.152c3b20a4dab7b850d64a6be3df78fa.js": "/New-York-Times---Project-1-/precache-manifest.152c3b20a4dab7b850d64a6be3df78fa.js",
+    "precache-manifest.33cb8b556162cfafe8c8cec41378e4fd.js": "/New-York-Times---Project-1-/precache-manifest.33cb8b556162cfafe8c8cec41378e4fd.js",
     "service-worker.js": "/New-York-Times---Project-1-/service-worker.js",
     "static/css/2.0624914a.chunk.css.map": "/New-York-Times---Project-1-/static/css/2.0624914a.chunk.css.map",
-    "static/css/main.efe5e9ec.chunk.css.map": "/New-York-Times---Project-1-/static/css/main.efe5e9ec.chunk.css.map",
+    "static/css/main.28ef080f.chunk.css.map": "/New-York-Times---Project-1-/static/css/main.28ef080f.chunk.css.map",
     "static/media/index.css": "/New-York-Times---Project-1-/static/media/background.d29046db.jpg",
     "static/media/logo.svg": "/New-York-Times---Project-1-/static/media/logo.25bf045c.svg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.1704763c.js",
     "static/css/2.0624914a.chunk.css",
     "static/js/2.2025bf25.chunk.js",
-    "static/css/main.efe5e9ec.chunk.css",
-    "static/js/main.86d56399.chunk.js"
+    "static/css/main.28ef080f.chunk.css",
+    "static/js/main.01a3e056.chunk.js"
   ]
 }
