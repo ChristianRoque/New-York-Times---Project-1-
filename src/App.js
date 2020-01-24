@@ -25,9 +25,7 @@ export default class App extends Component {
 		console.log(e.target);
 		let category = e.target.innerText;
 		axios
-			.get(
-				`https://api.nytimes.com/svc/topstories/v2/${category}.json?q=person&api-key=BvqS8W96aazmsaOtCxkvUOxEImk19Cla`
-			)
+			.get(`https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=6DulIuEEgy3O7ffCsmAOgMaVB1uYhdip`)
 			.then((data) => {
 				this.setState({
 					results: data.data.results
