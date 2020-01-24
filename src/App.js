@@ -13,9 +13,7 @@ export default class App extends Component {
 	};
 	componentWillMount = () => {
 		axios
-			.get(
-				`https://api.nytimes.com/svc/topstories/v2/science.json?q=person&api-key=BvqS8W96aazmsaOtCxkvUOxEImk19Cla`
-			)
+			.get(`https://api.nytimes.com/svc/topstories/v2/science.json?api-key=6DulIuEEgy3O7ffCsmAOgMaVB1uYhdip`)
 			.then((data) => {
 				this.setState({
 					results: data.data.results

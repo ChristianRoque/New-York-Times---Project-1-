@@ -10,7 +10,7 @@ export default class SlideShow extends Component {
 
 	picturesBar = () => {
 		return this.props.data.map((eachArticle, i) => {
-			if (eachArticle.multimedia.length == 0) {
+			if (eachArticle.multimedia == null || eachArticle.multimedia.length == 0) {
 				return;
 			} else {
 				return (
@@ -45,7 +45,7 @@ export default class SlideShow extends Component {
 		console.log(e.target.alt, 'works');
 
 		this.setState({
-			pictureURl: this.props.data[e.target.alt].multimedia[4].url,
+			pictureURl: this.props.data[e.target.alt].multimedia[0].url,
 			articleURL: this.props.data[e.target.alt].url,
 			title: this.props.data[e.target.alt].title,
 			abstract: this.props.data[e.target.alt].abstract,
@@ -58,7 +58,7 @@ export default class SlideShow extends Component {
 		if (!this.state.rendered) {
 			this.props.function();
 			this.setState({
-				pictureURl: this.props.data[this.state.current].multimedia[4].url,
+				pictureURl: this.props.data[this.state.current].multimedia[0].url,
 				title: this.props.data[this.state.current].title,
 				abstract: this.props.data[this.state.current].abstract
 			});
